@@ -31,6 +31,9 @@
                 {{#if reading_time}}
                     <span class="gh-card-length">{{reading_time}}</span>
                 {{/if}}
+                {{#if primary_tag}}
+                    <a class="gh-article-tag" href="{{primary_tag.url}}" style="--tag-color: {{primary_tag.accent_color}}">{{primary_tag.name}}</a>
+                {{/if}}
                 {{#unless access}}
                 {{^has visibility="public"}}
                     <span class="gh-card-access">
