@@ -219,8 +219,9 @@ hr {
 
 .has-side-about .gh-about-inner {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(4rem, 0.0842rem + 3.9474vw, 6.4rem);
+  grid-template-columns: 1fr 7fr;
+  row-gap: clamp(4rem, 0.0842rem + 3.9474vw, 6.4rem);
+  column-gap: clamp(1rem, -3.9158rem + 3.9474vw, 6.4rem);
 }
 
 .has-side-about .gh-about.no-image .gh-about-inner {
@@ -263,6 +264,10 @@ hr {
   display: flex;
   align-items: flex-end;
   min-height: var(--about-height, 100vh);
+}
+
+img.gh-about-image {
+  border-radius: 50%;
 }
 
 .has-background-about .gh-about-image {
@@ -721,7 +726,7 @@ hr {
 }
 
 .gh-article-image {
-  grid-column: 1 / span 12;
+  /* grid-column: 1 / span 12; */
   margin-top: clamp(4rem, 3rem + 3.125vw, 8rem);
 }
 
