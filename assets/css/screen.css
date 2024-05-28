@@ -869,8 +869,8 @@ img.gh-about-image {
 
 .gh-navigation {
   grid-column: 1 / span 12;
-  font-size: clamp(2rem, 1.7rem + 0.9375vw, 3.2rem);
-  font-weight: 800;
+  font-size: clamp(2rem, 1rem + -0.0625vw, 3.2rem);
+  font-weight: 700;
   letter-spacing: -0.02em;
 }
 
