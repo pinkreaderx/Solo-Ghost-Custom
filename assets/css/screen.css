@@ -989,3 +989,36 @@ img.gh-about-image {
 .gh-copyright {
   font-size: 1.4rem;
 }
+
+/* Chapters Index
+/* ---------------------------------------------------------- */
+
+.chapter-index-container {
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#chapterSearch {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  border: 0px solid #ccc;
+  padding-left: 10px;
+}
+
+.chapter-list a {
+  display: block;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #000;
+}
+
+.chapter-list a:hover {
+  background-color: #ffdde2;
+  border-radius: 10px;
+}
