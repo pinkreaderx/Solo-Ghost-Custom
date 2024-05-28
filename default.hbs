@@ -114,6 +114,41 @@
 
 <script src="{{asset "built/main.min.js"}}"></script>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+    function updateTagLinks(tagClass) {
+        var tagLinks = document.querySelectorAll(tagClass);
+
+        tagLinks.forEach(function (link) {
+            var href = link.getAttribute('href');
+
+            if (href) {
+                // Assuming the href is a URL, use URL object to parse it
+                try {
+                    var url = new URL(href, window.location.origin);
+                    var pathname = url.pathname;
+
+                    var primaryTagSlug = pathname.split('/').filter(Boolean).pop(); // Get the slug from the pathname
+
+                    if (primaryTagSlug.startsWith('edit-')) {
+                        var newSlug = primaryTagSlug.replace('edit-', '');
+                        var customUrl = '/bhtt/' + newSlug + '/';
+                        link.setAttribute('href', customUrl); // Update the href attribute to the custom URL
+                    }
+                } catch (error) {
+                    console.error('Error parsing URL:', error);
+                }
+            }
+        });
+    }
+
+    updateTagLinks('.gh-article-tag');
+    updateTagLinks('.gh-card-tag');
+});
+
+</script>
+
 {{ghost_foot}}
 
 </body>
